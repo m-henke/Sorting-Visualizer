@@ -26,11 +26,11 @@ def partition(data, start, end, speed, canvas, root, vals):
     swapped = False
 
     while start < end:
-        while start < len(data) and p <= data[start]:
+        while start < len(data) and data[start] >= p:
             start += 1
             draw(data, start, -9999, swapped, canvas, root, vals)
             time.sleep(speed)
-        while data[end] > p:
+        while data[end] < p:
             end -= 1
             draw(data, start, end, swapped, canvas, root, vals)
             time.sleep(speed)
