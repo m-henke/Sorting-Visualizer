@@ -41,9 +41,7 @@ def partition(data, start, end, speed, canvas, root, vals):
         swapped = False
         time.sleep(speed)
     swap(data, pi, end)
-    draw()
-    return end
-
+    draw(data, start, end, swapped, canvas, root, vals)
     return end
 
 

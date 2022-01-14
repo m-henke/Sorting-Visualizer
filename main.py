@@ -80,7 +80,7 @@ def run():
             end = time.time()
         elif alg_choice.get() == 'Quick Sort':
             start = time.time()
-            quick_sort()
+            quick_sort(data, speed, canvas, root, v)
             end = time.time()
         time_taken = end - start
         label_runtime['text'] = 'RunTime:', str(round(time_taken, 2)), 'seconds'
