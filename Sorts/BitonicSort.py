@@ -46,5 +46,5 @@ def bitonic(data, start, end, direction, speed, canvas, root, vals):
             return data
 
 
-def bitonic_sort(data, start, end, direction, speed, canvas, root, vals):  # array, start of array, length of array
+def bitonic_sort(data, start, end, direction, speed, canvas, root, vals):
     return bitonic(data, start, end, direction, speed, canvas, root, vals)

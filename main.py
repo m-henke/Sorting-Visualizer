@@ -13,6 +13,7 @@ from Sorts.QuickSort import quick_sort
 v = Values()
 
 
+# return true if the data set is sorted
 def is_sorted(data):
     for x in range(len(data) - 1):
         if data[x] < data[x + 1]:
@@ -20,6 +21,7 @@ def is_sorted(data):
     return True
 
 
+# draws the board with green going up to show its sorted
 def animate_completed(data):
     x = 0
     while x < len(data):
@@ -33,6 +35,7 @@ def animate_completed(data):
         root.update_idletasks()
 
 
+# draws the board
 def draw(data):
     canvas.delete('all')
     cur = v.ADJUSTER // 2
@@ -43,18 +46,11 @@ def draw(data):
         animate_completed(data)
 
 
-def get_speed(speed):
-    if speed == 'Slow':
-        return .25
-    if speed == 'Medium':
-        return .025
-    return 0
-
-
+#  chooses the algorithm to visualize
 def run():
     global data
     if alg_choice.get() in v.ALGORITHMS and speed_choice.get() in v.SPEEDS:
-        speed = get_speed(speed_choice.get())
+        speed = v.SPEEDS[speed_choice.get()]
         if alg_choice.get() == 'Bubble Sort':
             start = time.time()
             bubble_sort(data, speed, canvas, root, v)
@@ -87,6 +83,7 @@ def run():
         draw(data)
 
 
+# resets the display called when the reset button is pushed
 def reset():
     global data
     slider.set(v.DEFAULT_DATA_SIZE)
@@ -104,6 +101,7 @@ def update_slider(ls, lt):
     draw(data)
 
 
+# creates the tkinter window
 if __name__ == '__main__':
     root = tk.Tk()
     data = [random.randint(1, v.CANVAS_HEIGHT) for x in range(v.DEFAULT_DATA_SIZE)]
