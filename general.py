@@ -11,19 +11,19 @@ class Values:
     ADJUSTER = WIDTH // DEFAULT_DATA_SIZE  # number to adjust the width of a line
 
 
-SPEEDS = {
-    'Slow': .25,
-    'Medium': .025,
-    'Fast': 0
-}
-ALGORITHMS = [
-    'Bitonic Sort',
-    'Bubble Sort',
-    'Cocktail Shaker Sort',
-    'Insertion Sort',
-    'Merge Sort',
-    'Quick Sort'
-]
+    SPEEDS = {
+        'Slow': .25,
+        'Medium': .025,
+        'Fast': 0
+    }
+    ALGORITHMS = [
+        'Bitonic Sort',
+        'Bubble Sort',
+        'Cocktail Shaker Sort',
+        'Insertion Sort',
+        'Merge Sort',
+        'Quick Sort'
+    ]
 
 
 # swaps x and y position in data
